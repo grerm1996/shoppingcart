@@ -1,0 +1,51 @@
+.addBtn {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid maroon;
+    color: #fff;
+    background-color: maroon;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    height: 42px;
+}
+
+.addBtn:hover{
+    background: 0 0;
+    color: maroon;
+}
+
+.itemcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 280px;
+
+}
+
+input[type='number'] {
+    width: 40px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    height: 330px;
+    width: auto;
+}
