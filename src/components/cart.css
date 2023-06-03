@@ -26,11 +26,11 @@ h1 {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     align-items: center;
-    margin: 10p x;
+    margin: 10px;
 }
 
 .title {
-    font-size:1.2em;
+    font-size: 1.2em;
 }
 
 .bookinfo {
@@ -48,7 +48,7 @@ h1 {
     height: 1fr;
 }
 
-img {
+img.cartimg {
     height: 165px;
     width: auto;
 }

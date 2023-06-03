@@ -31,7 +31,8 @@
 
 input[type='number'] {
     width: 40px;
-    font-size: 20px;
+    height: 35px;
+    font-size: 25px;
     margin-right: 5px;
 }
 
@@ -45,7 +46,11 @@ h3 {
     text-align: center;
 }
 
-img {
+.productimg {
     height: 330px;
     width: auto;
+}
+
+.quantdiv {
+    margin: 10px 0px;
 }

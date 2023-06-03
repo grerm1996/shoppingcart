@@ -30,7 +30,7 @@ const Cart = (props) => {
                         <div className='cartcard'>
                             <div className='bookinfo'>
                                 <p class='title'>{book.title}</p>
-                                <img src={process.env.PUBLIC_URL + book.image} alt={book.title} />
+                                <img className='cartimg' src={process.env.PUBLIC_URL + book.image} alt={book.title} />
                                 <p>Quantity: {book.quant}  /  <button className='delBtn' onClick={() => props.removeFromCart(book)}>Remove from cart</button></p>
                             </div>
                             <p className='price'>${book.price}.00 × {book.quant}</p>

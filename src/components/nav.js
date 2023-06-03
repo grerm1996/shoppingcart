@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom';
-import {useEffect} from 'react';
+import {useEffect, useState, useMemo} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook } from "@fortawesome/free-solid-svg-icons"
+
 
 import './nav.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Nav = (props) => {
-
+    const [activePage, setActivePage] = useState(['home']);
 
     const linkStyle = {
         color: 'white',
         textDecoration: 'none',
     }
 
-    let quantities = props.cartItems.map(item => item.quant);
+    let quantities = useMemo(()=>{
+        return props.cartItems.map(item => item.quant);
+    }, [props.cartItems]);
 
     useEffect(() => {
         let cartNumber = document.getElementById('cartNumber');
@@ -26,23 +31,23 @@ const Nav = (props) => {
             return total + parseInt(item.quant);
           }, 0);
         cartNumber.textContent = itemTotal;
-  }, [quantities]);
+  }, [props.cartItems]);
 
 
     return (
         <div id='navbar'>
 
             <ul>
-                <Link to='/' style={linkStyle} >
-                    <li>Home</li>
+                <Link to='/' style={linkStyle} onClick={() => setActivePage('home')}>
+                    <li id={activePage==='home' ? 'activehome' : ''} className='navlink homelink'>BookCart <FontAwesomeIcon icon={faBook} /></li>
                 </Link>
 
-                <Link to='./products' style={linkStyle} >
-                    <li>Products</li>
+                <Link to='./products' style={linkStyle} onClick={() => setActivePage('products')}  >
+                    <li id={activePage==='products' ? 'active' : ''} className='navlink'>Products</li>
                 </Link>
 
-                <Link to='/cart' style={linkStyle}>
-                    <li><ShoppingCartIcon /> <span id='cartNumber'>0</span> items</li>
+                <Link to='/cart' style={linkStyle} onClick={() => setActivePage('cart')}>
+                    <li id={activePage==='cart' ? 'active' : ''} className='navlink' ><ShoppingCartIcon /> <span id='cartNumber'>0</span> items</li>
                 </Link>
             </ul>
 

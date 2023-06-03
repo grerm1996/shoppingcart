@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './item.css';
-import AddBtn from './addbutton';
 
 const Item = (props) => {
 
@@ -45,11 +44,11 @@ const Item = (props) => {
 
     return (
         <div className = 'itemcontainer'>
-             <img src={process.env.PUBLIC_URL + props.image} alt={props.title} />
+            <img className='productimg' src={process.env.PUBLIC_URL + props.image} alt={props.title} />
             <h3>{props.title}</h3>
             <p>{props.author}</p>
             <p>${props.price}.00</p>
-            <div>
+            <div className='quantdiv'>
                 <input type='number' id='quantity' min='1' placeholder='1' onChange={handleChange} value={quant}></input>
                 <button className='addBtn' onClick={ addToCart }>Add to cart</button>
             </div>
