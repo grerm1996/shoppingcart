@@ -37,11 +37,7 @@ const Item = (props) => {
               props.setCartItems(updatedItems);
         }
     }
-    useEffect(() => {
-        console.table(props.cartItems);
-        console.log('your cart item number' + props.cartItems.length)
-      }, [props.cartItems]);
-
+    
     return (
         <div className = 'itemcontainer'>
             <img className='productimg' src={process.env.PUBLIC_URL + props.image} alt={props.title} />

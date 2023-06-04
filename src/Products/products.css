@@ -1,7 +1,7 @@
 #productcontainer {
     display: flex;
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 3%;
+    margin-right: 3%;
     flex-wrap: wrap;
     margin-top: 70px;
     justify-content: center;

@@ -16,7 +16,8 @@ h1 {
     display: flex;
     flex-direction: column;
     grid-column: 1/2; 
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.651);
+    align-items: center;
     
 }
 
@@ -94,9 +95,93 @@ img.cartimg {
     font-weight: 800;
     font-size: 20px;
     height: 62px;
+    margin-top: 10px;
 }
 
 .checkoutBtn:hover {
             background: 0 0;
             color: #ff4742;
+}
+
+.modalOverlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 580px;
+    height: 500px;
+    gap: 10px;
+    padding: 0px 30px;
+
+}
+
+.truck {
+    height: 250px;
+    width: auto;
+    animation: drive ease-in-out 0.8s;
+
+}
+
+@keyframes drive {
+    0% {
+        transform: translate(-72px, 0)     
+    }
+    95% {
+        transform: translate(3px, 0)     
+    }
+
+    100% {
+        transform: translate(0px, 0)
+    }
+ }
+ 
+
+.closebtn {
+    cursor: pointer;
+}
+
+.empty {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emptymsg {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+
+.imgcredit {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+.emptycartimg {
+    height: 300px;
+    width: auto;
+}
+
+@media (width < 600px) {
+    #cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 5vw;
+    }
 }
