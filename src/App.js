@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import './home.css';
+import Slider from './Slider/slider';
 
 function App() {
 
@@ -15,20 +17,10 @@ function App() {
       }, [])
   
       return (
-          <div>
-              <img src={currentImage} />
+          <div className='homepage'>
+              <Slider />
           </div>
       )
-
-
-
-
-  return (
-    <div className="App">
-      <img src={currentImage}></img>
-    </div>
-  )
-
 }
 
 export default App;

@@ -36,6 +36,7 @@ const removeFromCart = (item) => {
         />
         <Route path="/products" element={<Products setCartItems={setCartItems} cartItems={cartItems}/>} />
       </Routes>
+      <Footer/>
       </div>
     </BrowserRouter>
   );

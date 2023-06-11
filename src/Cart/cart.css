@@ -1,11 +1,13 @@
 #cart {
-    margin-top: 70px;
+    margin: 70px 40px 0px 0px;
     display: grid;
     grid-template-columns: 2fr 1.2fr;
+    grid-template-rows: 80px auto;
     width: 100%;
-    padding-left: 15vw;
+    padding-left: 5vw;
     box-sizing: border-box;
     grid-gap: 20px;
+    flex: 1;
 }
 
 h1 {
@@ -17,7 +19,6 @@ h1 {
     flex-direction: column;
     grid-column: 1/2; 
     background-color: rgba(245, 245, 245, 0.651);
-    align-items: center;
     
 }
 

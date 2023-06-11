@@ -1,0 +1,60 @@
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel > ul {
+    padding: none;
+    margin: none;
+    width: 100vw
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 500ms opacity ease-in-out;
+    transition-delay: 500ms;
+}
+
+.slide > img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.active {
+    opacity: 1;
+    transition-delay: 0ms !important;
+    z-index: 1;
+}
+
+.carouselbtn {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    top: 50%;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem
+}
+
+.carouselbtn:hover,
+.carouselbtn:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.prev {
+    left: 1rem
+}
+
+.next {
+    right: 1rem
+}

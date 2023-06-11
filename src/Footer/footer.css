@@ -6,8 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
     bottom: 0;
+    position: sticky;
+    z-index: 2;
 }
 
 svg {
