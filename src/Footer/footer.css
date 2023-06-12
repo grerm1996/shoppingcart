@@ -8,13 +8,13 @@
     align-items: center;
     bottom: 0;
     position: sticky;
-    z-index: 2;
+    z-index: 3;
 }
 
 svg {
     height: 30px;
     width: auto;
-    fill: rgb(231, 224, 224);
+    fill: rgba(231, 224, 224, 0.877);
 }
 
 svg:hover {

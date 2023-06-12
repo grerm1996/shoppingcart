@@ -31,13 +31,15 @@ const Slider = () => {
     }, []);
 
   return (
-    <ul>
-      {images.map((image, index) => (
-        <li key={index} className={`slide ${image.isActive ? 'active' : ''}`}>
-          <img src={image.src} alt={image.alt} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul className='carousel'>
+        {images.map((image, index) => (
+          <li key={index} className={`slide ${image.isActive ? 'active' : ''}`}>
+            <img src={image.src} alt={image.alt} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

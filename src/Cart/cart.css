@@ -154,6 +154,10 @@ img.cartimg {
     cursor: pointer;
 }
 
+.closebtn:hover {
+    fill: maroon;
+}
+
 .empty {
     grid-column: 1/3;
     display: flex;
