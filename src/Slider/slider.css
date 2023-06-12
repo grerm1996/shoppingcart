@@ -1,7 +1,7 @@
 .carousel {
     padding: 0px;
     margin: 0px;
-    width: calc(100vw - 15px);
+    width: 100%;
     height: calc(100vh - 40px);
     overflow-x: hidden;
     position: relative;

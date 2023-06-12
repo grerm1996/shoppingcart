@@ -12,10 +12,6 @@ const RouteSwitch = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (item) => {
-    setCartItems((prevCartItems) => [...prevCartItems, item]);
-  };
-
 const removeFromCart = (item) => {
   const updatedCartItems = cartItems.filter((cartItem) => {
     return cartItem !== item;})

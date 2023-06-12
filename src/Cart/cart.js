@@ -24,7 +24,7 @@ const Cart = (props) => {
 
             {props.cartItems.length > 0 ? (
                 <>
-                    <CartContents cartItems={props.cartItems} removeFromCart={props.removeFromCart} />
+                    <CartContents cartItems={props.cartItems} removeFromCart={props.removeFromCart} setCartItems={props.setCartItems}/>
                     <CheckoutBtn totalPrice={totalPrice} />
                 </>
                 ) : (
