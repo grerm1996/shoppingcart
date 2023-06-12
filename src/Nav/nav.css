@@ -48,6 +48,7 @@
 
   #active {
     color: white;
+    font-weight: 500;
   }
 
   .homelink {
@@ -58,6 +59,7 @@
 
   #activehome {
     color: rgb(255, 186, 232);
+    font-weight: 900;
   }
 
   @media (width < 1200px) {
@@ -70,7 +72,7 @@
   @media (width < 950px) {
 
     ul {
-      padding: 10px 10px 0 0;
+      padding: 0px 10px 0 0;
       grid-template-columns: 1fr 1fr 1fr;
     }
 

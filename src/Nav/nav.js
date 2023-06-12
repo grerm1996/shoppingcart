@@ -6,10 +6,7 @@ import { faBook } from "@fortawesome/free-solid-svg-icons"
 
 import './nav.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
 const Nav = (props) => {
-    const [activePage, setActivePage] = useState(['home']);
-
     const linkStyle = {
         color: 'white',
         textDecoration: 'none',
@@ -38,16 +35,16 @@ const Nav = (props) => {
         <div id='navbar'>
 
             <ul>
-                <Link to='/shoppingcart' style={linkStyle} onClick={() => setActivePage('home')}>
-                    <li id={activePage==='home' ? 'activehome' : ''} className='navlink homelink'>BookCart <FontAwesomeIcon icon={faBook} /></li>
+                <Link to='/shoppingcart' style={linkStyle} onClick={() => props.setActivePage('home')}>
+                    <li id={props.activePage==='home' ? 'activehome' : ''} className='navlink homelink'>BookCart <FontAwesomeIcon icon={faBook} /></li>
                 </Link>
 
-                <Link to='/shoppingcart/products' style={linkStyle} onClick={() => setActivePage('products')}  >
-                    <li id={activePage==='products' ? 'active' : ''} className='navlink'>Products</li>
+                <Link to='/shoppingcart/products' style={linkStyle} onClick={() => props.setActivePage('products')}  >
+                    <li id={props.activePage==='products' ? 'active' : ''} className='navlink'>Products</li>
                 </Link>
 
-                <Link to='/shoppingcart/cart' style={linkStyle} onClick={() => setActivePage('cart')}>
-                    <li id={activePage==='cart' ? 'active' : ''} className='navlink' ><ShoppingCartIcon /> <span id='cartNumber'>0</span> items</li>
+                <Link to='/shoppingcart/cart' style={linkStyle} onClick={() => props.setActivePage('cart')}>
+                    <li id={props.activePage==='cart' ? 'active' : ''} className='navlink' ><ShoppingCartIcon /> <span id='cartNumber'>0</span> items</li>
                 </Link>
             </ul>
 

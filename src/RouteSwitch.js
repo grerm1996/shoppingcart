@@ -11,6 +11,7 @@ import './wrapper.css'
 const RouteSwitch = () => {
 
   const [cartItems, setCartItems] = useState([]);
+  const [activePage, setActivePage] = useState(['home']);
 
 const removeFromCart = (item) => {
   const updatedCartItems = cartItems.filter((cartItem) => {
@@ -24,9 +25,9 @@ const removeFromCart = (item) => {
   return (
     <BrowserRouter>
       <div className='wrapper'>
-      <Nav cartItems={cartItems} />
+      <Nav cartItems={cartItems} activePage={activePage} setActivePage={setActivePage}/>
       <Routes>
-        <Route path="/shoppingcart" element={<Slider />} />
+        <Route path="/shoppingcart" element={<Slider setActivePage={setActivePage}/>} />
         <Route
           path="/shoppingcart/cart"
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} removeFromCart={removeFromCart}/>}

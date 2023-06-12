@@ -1,7 +1,8 @@
 import './slider.css';
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
-const Slider = () => {
+const Slider = (props) => {
 
     const [images, setImages] = useState([
         { src: process.env.PUBLIC_URL + '/booksplash.jpg', alt: 'books', isActive: true },
@@ -9,6 +10,20 @@ const Slider = () => {
         { src: process.env.PUBLIC_URL + '/booksplash3.avif', alt: 'books', isActive: false }
     ]); 
 
+    const [showSlider, setShowSlider] = useState(false);
+
+    const linkStyle = {
+      color: 'white',
+      textDecoration: 'none',
+  }
+
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setShowSlider(true);
+      }, 100);
+
+      return () => clearTimeout(timeout);
+    }, []);
   
     
 
@@ -25,13 +40,13 @@ const Slider = () => {
 
         return updatedImages;
       });
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
     }, []);
 
   return (
-    <div>
+    <div className='sliderContainer'>
       <ul className='carousel'>
         {images.map((image, index) => (
           <li key={index} className={`slide ${image.isActive ? 'active' : ''}`}>
@@ -39,6 +54,14 @@ const Slider = () => {
           </li>
         ))}
       </ul>
+      
+      <div className="welcome">
+        <h2>Welcome to BookCart</h2>
+        <h3>Your next great read is waiting.</h3>
+        <Link to='/shoppingcart/products' style={linkStyle} >
+          <button className="welcomebtn" onClick={()=> props.setActivePage('products')}>Shop now</button>
+        </Link>
+      </div>
     </div>
   );
 };
