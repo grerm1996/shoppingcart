@@ -38,15 +38,15 @@ const Nav = (props) => {
         <div id='navbar'>
 
             <ul>
-                <Link to='/' style={linkStyle} onClick={() => setActivePage('home')}>
+                <Link to='/shoppingcart' style={linkStyle} onClick={() => setActivePage('home')}>
                     <li id={activePage==='home' ? 'activehome' : ''} className='navlink homelink'>BookCart <FontAwesomeIcon icon={faBook} /></li>
                 </Link>
 
-                <Link to='./products' style={linkStyle} onClick={() => setActivePage('products')}  >
+                <Link to='/shoppingcart/products' style={linkStyle} onClick={() => setActivePage('products')}  >
                     <li id={activePage==='products' ? 'active' : ''} className='navlink'>Products</li>
                 </Link>
 
-                <Link to='/cart' style={linkStyle} onClick={() => setActivePage('cart')}>
+                <Link to='/shoppingcart/cart' style={linkStyle} onClick={() => setActivePage('cart')}>
                     <li id={activePage==='cart' ? 'active' : ''} className='navlink' ><ShoppingCartIcon /> <span id='cartNumber'>0</span> items</li>
                 </Link>
             </ul>

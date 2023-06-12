@@ -26,12 +26,12 @@ const removeFromCart = (item) => {
       <div className='wrapper'>
       <Nav cartItems={cartItems} />
       <Routes>
-        <Route path="/" element={<Slider />} />
+        <Route path="/shoppingcart" element={<Slider />} />
         <Route
-          path="/cart"
+          path="/shoppingcart/cart"
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} removeFromCart={removeFromCart}/>}
         />
-        <Route path="/products" element={<Products setCartItems={setCartItems} cartItems={cartItems}/>} />
+        <Route path="/shoppingcart/products" element={<Products setCartItems={setCartItems} cartItems={cartItems}/>} />
       </Routes>
       <Footer/>
       </div>
